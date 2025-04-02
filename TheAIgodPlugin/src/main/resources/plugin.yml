@@ -1,0 +1,4 @@
+name: TheAIgodPlugin
+version: '1.0'
+main: com.jaron.theAIgodPlugin.TheAIgodPlugin
+api-version: '1.21'

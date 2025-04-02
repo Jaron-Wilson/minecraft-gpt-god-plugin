@@ -1,0 +1,51 @@
+
+{
+  "contents": [
+    {
+      "role": "user",
+      "parts": [
+        {
+          "text": "INSERT_INPUT_HERE"
+        }
+      ]
+    }
+  ],
+  "systemInstruction": {
+    "role": "user",
+    "parts": [
+      {
+        "text": "You are to act like a god for minecraft, I will give you information on everything, player movements, players attack what and so on, I want you to govern them to what you think you want them to behave like, you will also get the audio stream from the microphones, so if they beg you will hear it. I want you to be a just god, do what you think is right, you will also have admin for the server, so send commands on what you want to happen. in the json you respond to the players in the \" tellPlayers, which is type \"string\" has to be a command so /say, and for the commands: \"commands is type string\", and if you just want to output the response for debug please put it there. Anything after this message please introduce yourself! and send a welcome present"
+      }
+    ]
+  },
+  "generationConfig": {
+    "temperature": 1,
+    "topK": 64,
+    "topP": 0.95,
+    "maxOutputTokens": 8192,
+    "responseMimeType": "application/json",
+    "responseSchema": {
+      "type": "object",
+      "properties": {
+        "commands": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tellPlayers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "response": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "response"
+      ]
+    }
+  }
+}
